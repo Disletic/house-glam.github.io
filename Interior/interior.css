@@ -1,0 +1,286 @@
+* {
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+}
+.block1{
+	width: 100%;
+	height: 12.3456790123vh;
+}
+.table1{
+	margin-top: -1.45%;
+	height: 12.3456790123vh;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	font-family: 'Playfair Display';
+	font-size: 3vh;
+	max-height: 12.3456790123vh;
+
+}
+.font1{
+	font-family: 'Playfair Display';
+	font-size: 3vh;
+}
+.logo{
+	height: 10vh;
+	align-content: center;
+	text-align: center;
+}
+.vk{height: 5vh;}
+.tel{height: 5vh;}
+.inst{height: 5vh;}
+.photo1{
+	height: 70vh;
+}
+.photo2{
+	height: 50vh;
+}
+.photo3{
+	height: 50vh;
+}
+.Main1{
+	text-decoration: none; 
+    color: black; 
+}
+.h1{ /* Заголовок */
+	font-family: 'Playfair Display';
+	font-size: 5vh;
+	font-weight: lighter;
+}
+.h2{ /* Под-Заголовок */
+	font-family: 'Lato';
+	font-size: 4.5vh;
+	font-weight: bold;
+	color: black; 
+}
+.h3{ /* Основной-Текст */
+	font-family: 'Lato';
+	font-size: 3vh;
+	font-weight: lighter;
+}
+.block2{
+	width: 100%;
+	height: 80vh;
+	border: 0px;
+	margin-top: 5%;
+	display: grid;
+	border: 0px solid rgb(80, 145, 27);
+	border-radius: 0px;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 1fr 5fr 2fr;
+	grid-template-areas:
+	"a1 a1"
+	"a2 a3"
+	"a4 a3";
+}
+.block2 * {
+    border: 0px dashed; /* Обводим чёрным пунктиром */
+    border-radius: 0px; /* Скругляем углы на 10 пикселей */
+}
+.a1 { grid-area: a1 ;}
+.a2 { grid-area: a2 ;
+margin: 2%}
+.a3 { grid-area: a3 ;}
+.a4 { grid-area: a4 ;
+text-align: center;}
+.block3{
+	width: 100%;
+	height: 80vh;
+	border: 0px;
+	margin-top: 5%;
+	display: grid;
+	border: 0px solid rgb(80, 145, 27);
+	border-radius: 0px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 3fr 5fr 7fr 1fr;
+	grid-template-areas:
+	"b1 b1 b1"
+	"b2 b3 b4"
+	"b5 b6 b7"
+	"b8 b8 b8";
+}
+.block3 * {
+    border: 0px dashed; /* Обводим чёрным пунктиром */
+    border-radius: 0px; /* Скругляем углы на 10 пикселей */
+}
+.b1 { grid-area: b1 ;
+margin-left: 2%}
+.b2 { grid-area: b2 ;
+align-self: center;}
+.b3 { grid-area: b3 ;
+align-self: center;}
+.b4 { grid-area: b4 ;
+align-self: center;}
+.b5 { grid-area: b5 ;
+text-align: center;}
+.b6 { grid-area: b6 ;
+text-align: center;}
+.b7 { grid-area: b7 ;
+text-align: center;}
+.b8 { grid-area: b8 ;
+margin-left: 2%}
+.block4{
+	width: 100%;
+	height: 80vh;
+	border: 0px;
+	margin-top: 5%;
+	display: grid;
+	border: 0px solid rgb(80, 145, 27);
+	border-radius: 0px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 3fr 5fr 7fr 1fr;
+	grid-template-areas:
+	"c1 c1 c1"
+	"c2 c3 c4"
+	"c5 c6 c7"
+	"c8 c8 c8";
+}
+.block4 * {
+    border: 0px dashed; /* Обводим чёрным пунктиром */
+    border-radius: 0px; /* Скругляем углы на 10 пикселей */
+}
+.c1 { grid-area: c1 ;
+margin-left: 2%}
+.c2 { grid-area: c2 ;
+align-self: center;}
+.c3 { grid-area: c3 ;
+align-self: center;}
+.c4 { grid-area: c4 ;
+align-self: center;}
+.c5 { grid-area: c5 ;
+text-align: center;}
+.c6 { grid-area: c6 ;
+text-align: center;}
+.c7 { grid-area: c7 ;
+text-align: center;}
+.c8 { grid-area: c8 ;
+margin-left: 2%}
+.block5{
+	width: 100%;
+	height: 80vh;
+	border: 0px;
+	margin-top: 5%;
+	display: grid;
+	border: 0px solid rgb(80, 145, 27);
+	border-radius: 0px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 3fr 5fr 7fr 1fr;
+	grid-template-areas:
+	"e1 e1 e1"
+	"e2 e3 e4"
+	"e5 e6 e7"
+	"e8 e8 e8";
+}
+.block5 * {
+    border: 0px dashed; /* Обводим чёрным пунктиром */
+    border-radius: 0px; /* Скругляем углы на 10 пикселей */
+}
+.e1 { grid-area: e1 ;
+margin-left: 2%}
+.e2 { grid-area: e2 ;
+align-self: center;}
+.e3 { grid-area: e3 ;
+align-self: center;}
+.e4 { grid-area: e4 ;
+align-self: center;}
+.e5 { grid-area: e5 ;
+text-align: center;}
+.e6 { grid-area: e6 ;
+text-align: center;}
+.e7 { grid-area: e7 ;
+text-align: center;}
+.e8 { grid-area: e8 ;
+margin-left: 2%}
+.block7{
+	width: 100%;
+	height: 80vh;
+	border: 0px;
+	margin-top: 5%;
+	display: grid;
+	border: 0px solid rgb(80, 145, 27);
+	border-radius: 0px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 3fr 5fr 7fr 1fr;
+	grid-template-areas:
+	"f1 f1 f1"
+	"f2 f3 f4"
+	"f5 f6 f7"
+	"f8 f8 f8";
+}
+.block7 * {
+    border: 0px dashed; /* Обводим чёрным пунктиром */
+    border-radius: 0px; /* Скругляем углы на 10 пикселей */
+}
+.f1 { grid-area: f1 ;
+margin-left: 2%}
+.f2 { grid-area: f2 ;
+align-self: center;}
+.f3 { grid-area: f3 ;
+align-self: center;}
+.f4 { grid-area: f4 ;
+align-self: center;}
+.f5 { grid-area: f5 ;
+text-align: center;}
+.f6 { grid-area: f6 ;
+text-align: center;}
+.f7 { grid-area: f7 ;
+text-align: center;}
+.f8 { grid-area: f8 ;
+margin-left: 2%}
+.block6{
+	margin-top: 10%;
+	height: 30vh;
+	border: 0px;
+	display: grid;
+	border: 0px solid rgb(80, 145, 27);
+	border-radius: 0px;
+	grid-template-columns: 3fr 2fr;
+	grid-template-areas:
+	"d1 d3"
+	"d2 d3"
+}
+.block6 * {
+    border: 0px dashed; /* Обводим чёрным пунктиром */
+    border-radius: 0px; /* Скругляем углы на 10 пикселей */
+}
+.d1{ grid-area: d1 ;
+margin-left: 4%;
+margin-top: 4%}
+.d2{ grid-area: d2 ;
+margin-left: 4%;}
+.d3{ grid-area: d3 ;
+ display: grid;
+grid-template-areas:
+"d4 d5"
+"d6 d7";
+grid-template-rows: 1fr 3fr;}
+.d4{ grid-area: d4 ;
+align-self: center;}
+.d5{ grid-area: d5 ;
+align-self: center;}
+.d6{ grid-area: d6 ;}
+.d7{ grid-area: d7 ;
+	display: grid;
+	grid-template-areas:
+"d8 d9 d10";
+}
+.h11{
+	font-family: 'Lato';
+	font-size: 3vh;
+	font-weight: bolder;
+}
+.h12{
+	font-family: 'Lato';
+	font-size: 3vh ;
+}
+.h13{
+	font-family: 'Lato';
+	font-size: 3vh ;
+}
+.h14{
+	font-family: 'Lato';
+	font-size: 3vh ;
+	font-weight: 1;
+}
