@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация и вход пользователя</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        form {
+            max-width: 400px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            border-radius: 5px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        button {
+            width: 100%;
+            height: 40px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        p {
+            text-align: center;
+            font-weight: bold;
+            color: green;
+            margin-top: 20px;
+        }
+        
+        p.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Регистрация и Вход пользователя</h1>
+<div class="container">
+    <div>
+        <h2>Регистрация</h2>
+        <form method="POST" action="/register" onsubmit="return handleSubmit(this);">
+            <label for="regEmailInput">Адрес электронной почты:</label>
+            <input type="email" id="regEmailInput" name="email" placeholder="Ваш e-mail..." required><br>
+            
+            <label for="regPasswordInput">Пароль:</label>
+            <input type="password" id="regPasswordInput" name="password" placeholder="Ваш пароль..." required><br>
+            
+            <label for="regConfirmPasswordInput">Повторите пароль:</label>
+            <input type="password" id="regConfirmPasswordInput" name="confirm-password" placeholder="Повторите ваш пароль..." required><br>
+            
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <p id="registrationResult"></p>
+    </div>
+
+    <div>
+        <h2>Вход</h2>
+        <form method="POST" action="/login" onsubmit="return handleLoginSubmit(this);">
+            <label for="logEmailInput">Адрес электронной почты:</label>
+            <input type="email" id="logEmailInput" name="email" placeholder="Ваш e-mail..." required><br>
+            
+            <label for="logPasswordInput">Пароль:</label>
+            <input type="password" id="logPasswordInput" name="password" placeholder="Ваш пароль..." required><br>
+            
+            <button type="submit">Войти</button>
+        </form>
+        <p id="loginResult"></p>
+    </div>
+</div>
+
+<script>
+
+function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+function validateRegistration(form) {
+    let regEmailInput = document.getElementById('regEmailInput').value.trim();
+    let regPasswordInput = document.getElementById('regPasswordInput').value.trim();
+    let regConfirmPasswordInput = document.getElementById('regConfirmPasswordInput').value.trim();
+    let registrationResultField = document.getElementById('registrationResult');
+    
+    if (!isValidEmail(regEmailInput)) {
+        registrationResultField.className = 'error';
+        registrationResultField.textContent = 'Неверный формат E-Mail!';
+        return false;
+    }
+    
+    if (regPasswordInput !== regConfirmPasswordInput) {
+        registrationResultField.className = 'error';
+        registrationResultField.textContent = 'Пароли не совпадают!';
+        clearPasswordFields(); 
+        return false;
+    }
+    
+    if (regPasswordInput.length < 6) {
+        registrationResultField.className = 'error';
+        registrationResultField.textContent = 'Пароль должен содержать минимум 6 символов!';
+        return false;
+    }
+    
+    registrationResultField.className = '';
+    registrationResultField.textContent = '';
+    return true;
+}
+
+function clearPasswordFields() {
+    document.getElementById('regPasswordInput').value = '';
+    document.getElementById('regConfirmPasswordInput').value = '';
+}
+
+function handleSubmit(form) {
+    if (validateRegistration(form)) {
+        showSuccessMessage('registrationResult', 'Регистрация успешна, перенаправляю на главную страницу.');
+        setTimeout(function() {
+            location.href = '/main.html';
+        }, 2000);
+    }
+    return false;
+}
+
+function validateLogin(form) {
+    let logEmailInput = document.getElementById('logEmailInput').value.trim();
+    let logPasswordInput = document.getElementById('logPasswordInput').value.trim();
+    let loginResultField = document.getElementById('loginResult');
+    
+    if (!isValidEmail(logEmailInput)) {
+        loginResultField.className = 'error';
+        loginResultField.textContent = 'Неверный формат E-Mail!';
+        return false;
+    }
+    
+    if (logPasswordInput.length === 0) {
+        loginResultField.className = 'error';
+        loginResultField.textContent = 'Пароль не может быть пустым!';
+        return false;
+    }
+    
+    loginResultField.className = '';
+    loginResultField.textContent = '';
+    return true;
+}
+
+
+function handleLoginSubmit(form) {
+    if (validateLogin(form)) {
+        showSuccessMessage('loginResult', 'Авторизация успешна, перенаправляю на главную страницу.');
+        setTimeout(function() {
+            location.href = '/main.html';
+        }, 2000);
+    }
+    return false;
+}
+
+function showSuccessMessage(resultFieldID, messageText) {
+    let resultField = document.getElementById(resultFieldID);
+    resultField.className = '';
+    resultField.textContent = messageText;
+}
+</script>
+
+</body>
+</html>
