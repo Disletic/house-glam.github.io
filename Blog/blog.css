@@ -1,0 +1,239 @@
+*{
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+}
+.block1{
+	width: 100%;
+	height: 12.3456790123vh;
+}
+.block2{
+	width: 100%;
+	height: 210vh;
+	border: 0px;
+	margin-top: 5%;
+	display: grid;
+	border: 0px solid rgb(80, 145, 27);
+	border-radius: 0px;
+	grid-template-columns: 4fr 2fr;
+	grid-template-rows: 2fr 5fr 10fr 1fr;
+	grid-template-areas:
+	"a1 a1"
+	"a2 a3"
+	"a4 a4"
+	"a5 a5"
+}
+.block2 * {
+    border: 0px dashed; /* Обводим чёрным пунктиром */
+    border-radius: 0px; /* Скругляем углы на 10 пикселей */
+}
+.a1{ grid-area: a1 ;}
+.a2{ grid-area: a2 ;
+padding-left: 2%}
+.a3{ grid-area: a3 ;
+justify-self: end;}
+.a4{ grid-area: a4 ;
+padding-left: 1.5%}
+.a5{ grid-area: a5 ;
+justify-self: end;}
+.block3{
+	width: 100%;
+	height: 180vh;
+	border: 0px;
+	margin-top: 5%;
+	display: grid;
+	border: 0px solid rgb(80, 145, 27);
+	border-radius: 0px;
+	grid-template-columns: 4fr 2fr;
+	grid-template-rows: 2fr 6fr 10fr 1fr;
+	grid-template-areas:
+	"b1 b2"
+	"b3 b2"
+	"b4 b4"
+	"b5 b5"
+}
+.block3 * {
+    border: 0px dashed; /* Обводим чёрным пунктиром */
+    border-radius: 0px; /* Скругляем углы на 10 пикселей */
+}
+.b1 {grid-area: b1 ;
+padding-left: 2%;}
+.b2 {grid-area: b2 ;
+justify-self: end;}
+.b3 {grid-area: b3 ;
+padding-left: 2%;}
+.b4 {grid-area: b4 ;
+padding-left: 1.5%;}
+.b5 {grid-area: b5 ;
+justify-self: end;}
+.logo{
+	height: 10vh;
+	align-content: center;
+	text-align: center;
+}
+.block4{
+	width: 100%;
+	height: 180vh;
+	border: 0px;
+	margin-top: 5%;
+	display: grid;
+	border: 0px solid rgb(80, 145, 27);
+	border-radius: 0px;
+	grid-template-columns: 4fr 2fr;
+	grid-template-rows: 2fr 8fr 10fr 1fr;
+	grid-template-areas:
+	"c1 c2"
+	"c3 c2"
+	"c4 c4"
+	"c5 c5"
+}
+.block4 * {
+    border: 0px dashed; /* Обводим чёрным пунктиром */
+    border-radius: 0px; /* Скругляем углы на 10 пикселей */
+}
+.c1 { grid-area: c1 ;
+padding-left: 2%;}
+.c2 { grid-area: c2 ;
+justify-self: end;}
+.c3 { grid-area: c3 ;
+padding-left: 2%;}
+.c4 { grid-area: c4 ;
+padding-left: 1.5%;}
+.c5 { grid-area: c5 ;
+justify-self: end;}
+.block6{
+	margin-top: 10%;
+	height: 30vh;
+	border: 0px;
+	display: grid;
+	border: 0px solid rgb(80, 145, 27);
+	border-radius: 0px;
+	grid-template-columns: 3fr 2fr;
+	grid-template-areas:
+	"d1 d3"
+	"d2 d3"
+}
+.block6 * {
+    border: 0px dashed; /* Обводим чёрным пунктиром */
+    border-radius: 0px; /* Скругляем углы на 10 пикселей */
+}
+.d1{ grid-area: d1 ;
+margin-left: 4%;
+margin-top: 4%}
+.d2{ grid-area: d2 ;
+margin-left: 4%;}
+.d3{ grid-area: d3 ;
+ display: grid;
+grid-template-areas:
+"d4 d5"
+"d6 d7";
+grid-template-rows: 1fr 3fr;}
+.d4{ grid-area: d4 ;
+align-self: center;}
+.d5{ grid-area: d5 ;
+align-self: center;}
+.d6{ grid-area: d6 ;}
+.d7{ grid-area: d7 ;
+	display: grid;
+	grid-template-areas:
+"d8 d9 d10";
+}
+.photo1{
+	height: 85vh;
+}
+.photo2{
+	height: 85vh;
+}
+.photo3{
+	height: 80vh;
+}
+.tip{
+	height: 6vh;
+}
+.vk{height: 5vh;}
+.tel{height: 5vh;}
+.inst{height: 5vh;}
+.table1{
+	margin-top: -1.45%;
+	height: 12.3456790123vh;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	font-family: 'Playfair Display';
+	font-size: 3vh;
+	max-height: 12.3456790123vh;
+
+}
+.h1{
+	font-family: 'Playfair Display';
+	font-size: 5vh;
+	font-weight: 4;
+}
+.h2{
+	font-family: 'Lato';
+	font-size: 5vh;
+	font-weight: bolder;
+}
+.h3{
+	font-family: 'Lato';
+	font-size: 5vh;
+	font-weight: 2;
+}
+.h4{
+	font-family: 'Lato';
+	font-size: 3vh;
+	font-weight: lighter;
+}
+.h5{
+	font-family: 'Lato';
+	font-size: 5vh;
+	font-weight: bolder;
+}
+.h6{
+	font-family: 'Lato';
+	font-size: 3vh;
+	font-weight: lighter;
+}
+.h7{
+	font-family: 'Lato';
+	font-size: 5vh;
+	font-weight: bolder;
+}
+.h8{
+	font-family: 'Lato';
+	font-size: 5vh;
+	font-weight: lighter;
+}
+.h9{
+	font-family: 'Lato';
+	font-size: 5vh;
+	font-weight: bolder;
+}
+.h10{
+	font-family: 'Lato';
+	font-size: 3vh;
+	font-weight: lighter;
+}
+.h11{
+	font-family: 'Lato';
+	font-size: 3vh;
+	font-weight: bolder;
+}
+.h12{
+	font-family: 'Lato';
+	font-size: 3vh ;
+}
+.h13{
+	font-family: 'Lato';
+	font-size: 3vh ;
+}
+.h14{
+	font-family: 'Lato';
+	font-size: 3vh ;
+	font-weight: 1;
+}
+.Main1{
+	text-decoration: none; 
+    color: black; 
+}
